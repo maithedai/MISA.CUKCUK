@@ -288,12 +288,97 @@ input:focus {
     position: absolute;
     width: 100%;
     top: 55px;
-    bottom: 16px;
+    bottom: 32px;
+    overflow-x: auto;
+    /* overflow-y: hidden; */
+    border-bottom: 4px solid #ccc;
 }
+
+.bo-content-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-text-left {
+    position: absolute;
+    left: 0;
+}
+
+.footer-text-right {
+    position: absolute;
+    right: 0;
+}
+
+.content-pages {
+    position: absolute;
+    display: flex;
+}
+
+    .content-pages .first-page {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        background-image: url("../Resource/icon/btn-firstpage.svg");
+        background-repeat: no-repeat;
+    }
+
+    .content-pages .last-page {
+        width: 20px;
+        height: 20px;
+        margin-left: 8px;
+        background-image: url("../Resource/icon/btn-lastpage.svg");
+        background-repeat: no-repeat;
+    }
+
+    .content-pages .prev-page {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        background-image: url("../Resource/icon/btn-prev-page.svg");
+        background-repeat: no-repeat;
+    }
+
+    .content-pages .next-page {
+        width: 20px;
+        height: 20px;
+        margin-left: 8px;
+        background-image: url("../Resource/icon/btn-next-page.svg");
+        background-repeat: no-repeat;
+    }
+
+    .content-pages .page-item {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        line-height: 25px;
+        text-align: center;
+        margin-left: 8px;
+    }
 
 table {
     width: 100%;
     border-collapse: collapse;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background: rgb(235, 235, 235);
+    color: #000;
+  }
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
 }
 
 td {
@@ -358,7 +443,7 @@ th {
         right: 0;
         bottom: 0;
         background-color: #ccc;
-        opacity: 0.7;
+        opacity: 0.9;
     }
 
 div.formDetail input,
