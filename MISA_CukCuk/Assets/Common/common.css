@@ -442,8 +442,8 @@ th {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #ccc;
-        opacity: 0.9;
+        background-color: rgb(0, 0, 0);
+        opacity: 0.5;
     }
 
 div.formDetail input,
@@ -614,4 +614,8 @@ div.formDetail select {
     display: none;
     z-index: 2;
     background-color: #fff;
+}
+
+.fade {
+    opacity: 0.2;
 }

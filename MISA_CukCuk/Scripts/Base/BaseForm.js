@@ -239,6 +239,7 @@ class BaseForm {
      * MTDAI 06.06.2021
      */
     loading() {
+        debugger
         let me = this;
         me.load.show();
         $('.wrapper').addClass('fade');

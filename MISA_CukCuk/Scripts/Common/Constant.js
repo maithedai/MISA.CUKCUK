@@ -6,5 +6,10 @@ Constant.Gender = {
     "Nam": 1,   
     "Khác": 2  
 }
+
+Constant.WorkStatus = {
+    "Đang công tác": 1,    
+    "Đã nghỉ việc": 2  
+}
 // Domain trong môi trường develop
 Constant.UrlPrefix = "http://cukcuk.manhnv.net/";

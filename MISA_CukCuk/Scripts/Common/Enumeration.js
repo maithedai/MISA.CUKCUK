@@ -14,3 +14,9 @@ Enumeration.Gender = {
     Male: 1,   // Nam
     Other: 2   // Khác
 }
+
+// Tình trạng làm việc
+Enumeration.WorkStatus = {
+    Active: 1,
+    UnActive: 2
+}

@@ -43,7 +43,7 @@ div#gridEmployee {
 .container .m-cbo:active{
     border-color: #d2d2d2;
 }
-/* style cho cÃƒÂ¡c thÃ¡ÂºÂ» anh em */
+/* style cho cÃƒÆ’Ã‚Â¡c thÃƒÂ¡Ã‚ÂºÃ‚Â» anh em */
 .container .m-cbo:hover ~ .h-line,
 .container .m-cbo:focus ~ .h-line,
 .container .m-cbo:active ~ .h-line{
@@ -99,7 +99,7 @@ div#gridEmployee {
 .container .input-field .btn-clear{
     position: absolute;
     top: 15px;
-    right: 50px;
+    right: 17%;
     cursor: pointer;
     display: none;
 }

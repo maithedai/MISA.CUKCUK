@@ -115,6 +115,20 @@
                     </div>
                     <div class="bo-refresh"></div>
                 </div>
+                <div class="bo-content-footer">
+                    <div class="footer-text-left">Hiển thị 1-10/1000 nhân viên</div>
+                    <div class="content-pages">
+                        <div class="first-page"></div>
+                        <div class="prev-page"></div>
+                        <div class="page-item" style="background-color: #019160; color: #fff;">1</div>
+                        <div class="page-item">2</div>
+                        <div class="page-item">3</div>
+                        <div class="page-item">4</div>
+                        <div class="next-page"></div>
+                        <div class="last-page"></div>
+                    </div>
+                    <div class="footer-text-right">10 nhân viên/trang</div>
+                </div>
 
                 <!-- Danh sách nhân viên -->
                 <div class="bo-content">
@@ -129,7 +143,7 @@
                             <div class="col" FieldName="Address">Địa chỉ</div>
                             <div class="col" FieldName="DepartmentName">Phòng ban</div>
                             <div class="col" FieldName="Salary" DataType="Number">Lương</div>
-                            <div class="col" FieldName="WorkStatus">Tình trạng làm việc</div>
+                            <div class="col" FieldName="WorkStatus">Tình trạng công việc</div>
                         </div>
                     </div>
                 </div>
@@ -311,17 +325,17 @@
                                                 <div class="pn-workstatus">
                                                     <div class="container content-control">
                                                         <div class="input-field">
-                                                            <input type="text" id="cboDate" placeholder="Tình trạng làm việc" FieldName="WorkStatus" DataType="Enum">
+                                                            <input type="text" id="cboDate" placeholder="Tình trạng làm việc" FieldName="WorkStatus" DataType="Enum" EnumName="WorkStatus">
                                                             <div class="h-line-form"></div>
                                                             <div class="arrow-form" data-arrow="true"><i class="fas fa-angle-down" data-arrow="true"></i></div>
                                                             <div class="btn-clear"><i class="far fa-times-circle"></i></div>
                                                         </div>
                                                         <div class="drop-down">
-                                                            <div class="dr-item" value="1">
+                                                            <div class="dr-item">
                                                                 <div class="icon"><i class="fas fa-check"></i></div>
-                                                                <div class="text" >Đang công tác</div>
+                                                                <div class="text" value="1">Đang công tác</div>
                                                             </div>
-                                                            <div class="dr-item" value="2">
+                                                            <div class="dr-item">
                                                                 <div class="icon"><i class="fas fa-check"></i></div>
                                                                 <div class="text" value="2">Đã nghỉ việc</div>
                                                             </div>     
@@ -346,20 +360,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="bo-content-footer">
-                    <div class="footer-text-left">Hiển thị 1-10/1000 nhân viên</div>
-                    <div class="content-pages">
-                        <div class="first-page"></div>
-                        <div class="prev-page"></div>
-                        <div class="page-item">1</div>
-                        <div class="page-item">2</div>
-                        <div class="page-item">3</div>
-                        <div class="page-item">4</div>
-                        <div class="next-page"></div>
-                        <div class="last-page"></div>
-                    </div>
-                    <div class="footer-text-right">10 nhân viên/trang</div>
                 </div>
             </div>
         </div>
