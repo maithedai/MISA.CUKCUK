@@ -28,6 +28,9 @@ class BaseGrid {
 
         //Khởi tạo sự kiện click button toolbar
         me.initEventToolbar();
+
+        //Khởi tạo sự kiện click button refresh
+        me.refreshPage();
     }
 
     /**
@@ -303,6 +306,20 @@ class BaseGrid {
                 break;
         }
         return data;
+    }
+
+    
+    /**
+     * Hàm click refresh để load lại trang 
+     */
+    refreshPage() {
+
+        let me = this;
+        // debugger
+        $(".bo-refresh").on("click", function() {
+            me.refresh();
+        })
+
     }
 
     /**

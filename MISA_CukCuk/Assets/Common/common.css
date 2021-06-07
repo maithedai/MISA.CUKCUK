@@ -8,7 +8,10 @@ body {
     font-family: GoogleSans;
     src: url("../Resource/font/GoogleSans-Regular.otf");
 }
-
+.wrapper {
+    width: 100%;
+    height: 100vh;
+}
 .menu-left {
     width: 250px;
     height: 100vh;
@@ -26,7 +29,6 @@ body {
 .menu-left .menu-header {
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid rgb(224, 224, 224);
 }
 
 .menu-header .icon-bar {
@@ -52,8 +54,7 @@ body {
 .menu-item {
     display: flex;
     width: 100%;
-    height: 40px;
-    border-bottom: 1px solid rgb(211, 211, 211);
+    height: 50px;
     cursor: pointer;
 }
 
@@ -72,7 +73,7 @@ body {
     .menu-item .menu-item-text {
         width: calc(100% - 40px);
         height: 100%;
-        line-height: 40px;
+        line-height: 50px;
     }
 
 .icon-board {
@@ -435,7 +436,7 @@ th {
     bottom: 0;
     display: none;
 }
-
+    .formDetail .wrapper,
     .formDetail .formWrapp {
         position: fixed;
         top: 0;
@@ -618,4 +619,40 @@ div.formDetail select {
 
 .fade {
     opacity: 0.2;
+}
+
+.loading-spinner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.loading-spinner .loader {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #019160;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+.loading-message {
+    margin-left: -17px;
+    align-self: start;
+    font-size: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

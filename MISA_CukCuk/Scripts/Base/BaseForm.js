@@ -239,14 +239,13 @@ class BaseForm {
      * MTDAI 06.06.2021
      */
     loading() {
-        debugger
         let me = this;
         me.load.show();
         $('.wrapper').addClass('fade');
         setTimeout(function() {
             me.load.hide();
             $('.wrapper').removeClass('fade');
-        }, 2000);
+        }, 1000);
     }
 
     /**
@@ -304,7 +303,6 @@ class BaseForm {
      */
     show() {
         let me = this;
-
         
         me.form.show();
         me.form.find('[FieldName = "EmployeeCode"]').focus();
