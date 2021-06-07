@@ -477,7 +477,8 @@ div.formDetail select {
         align-items: center;
         justify-content: flex-end;
         background-color: rgb(236, 236, 236);
-        border-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 
 .co-body {
