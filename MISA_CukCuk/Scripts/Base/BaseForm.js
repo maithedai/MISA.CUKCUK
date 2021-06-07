@@ -45,6 +45,8 @@ class BaseForm {
         })
     }
 
+    
+
     /**
      * Hàm kiểm tra và lưu dữ liệu
      * MTDAI 06.06.2021
@@ -54,7 +56,6 @@ class BaseForm {
             isValid = me.validateForm();
 
         if (isValid) {
-            // debugger
             let data = me.getDataForm();
             me.saveData(data);
         }
@@ -65,7 +66,6 @@ class BaseForm {
      * MTDAI 06.06.2021
      */
     saveData(data) {
-        debugger
         let me = this,
             url = me.Parent.urlAdd,
             method = Resource.Method.Post,
@@ -80,7 +80,6 @@ class BaseForm {
 
         // Gọi lên server cất dữ liệu
         CommonFn.Ajax(urlFull, method, data, function(response) {
-            debugger
             if (response) {
                 console.log("Cất dữ liệu thành công");
 
@@ -106,7 +105,6 @@ class BaseForm {
                 dataType = control.attr("DataType"),
                 fieldName = control.attr("FieldName"),
                 value = me.getValueControl(control, dataType);
-
             data[fieldName] = value;
         });
 
@@ -130,7 +128,7 @@ class BaseForm {
                 value = parseInt(value);
                 break;
             case Resource.DataTypeColumn.Enum:
-                value = parseInt(value);
+                value = value != null? Constant.Gender[value]: null;
                 break;
         }
 
@@ -142,7 +140,6 @@ class BaseForm {
      * MTDAI 06.06.2021
      */
     validateForm() {
-        debugger
         let me = this,
             isValid = me.validateRequire();
 
@@ -302,7 +299,6 @@ class BaseForm {
     /**
      * Hiển thị form
      * MTDAI 06.06.2021
-     * MTDAI 04.06.2021
      * Hàm khi add hoặc edit sẽ Focus vao form đầu tiên
      */
     show() {

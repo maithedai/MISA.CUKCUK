@@ -70,6 +70,34 @@ class BaseGrid {
         }
     }
 
+    initEventToolbarRefresh() {
+
+        let me = this,
+            toolbarId = me.grid.attr("Toolbar"),
+            toolbar = $(`#${toolbarId}`);
+
+            if (toolbar.length > 0 && Resource.CommandType.Refresh) {
+                toolbar.find(".bo-refresh").on("click", function() {
+    
+                    let commandType = $(this).attr("CommandType"),
+                        fireEvent = null;
+    
+                    switch (commandType) {
+                        
+                        case Resource.CommandType.Refresh: // Tải lại
+                            fireEvent = me.refresh;
+                            break;
+                    }
+    
+                    // // Kiểm tra nếu có hàm thì gọi
+                    if (typeof(fireEvent) == 'function') {
+                        fireEvent = fireEvent.bind(me);
+                        fireEvent();
+                    }
+                });
+            }
+    }
+
 
     /**
      * Hàm chọn 1 hàng
@@ -279,7 +307,7 @@ class BaseGrid {
 
     /**
      * Hàm thêm mới dữ liệu
-     * MTDAI 06.06.2021
+     * MTDAI 07.06.2021
      */
     add() {
         let me = this,
@@ -293,6 +321,17 @@ class BaseGrid {
         if (me.formDetail) {
             me.formDetail.open(param);
         }
+    }
+
+    /**
+     * Hàm refresh lại trang
+     * MTDAI 06.06.2021
+     */
+    refresh() {
+        let me = this;
+        if (me.formDetail)
+            me.formDetail.loading();
+        me.getDataServer();
     }
 
 }

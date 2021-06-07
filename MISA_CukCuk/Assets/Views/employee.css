@@ -6,3 +6,148 @@ div#gridEmployee {
 .selected-row {
     background: rgb(223, 223, 223);
 }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.content-control {
+    /* width: 100%; */
+    /* height: 38px; */
+}
+
+.container .m-lbl{
+    font-size: 13px;
+    color: #000000;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.container .m-cbo{
+    width: 170px;
+    height: 36px;
+    border: 1px #bbbbbb solid;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #000000;
+    padding-left: 16px;
+    padding-right: 62px;
+    /* margin: 4px; */
+    outline: none;
+    text-overflow: ellipsis;
+}
+.container .m-cbo:hover,
+.container .m-cbo:focus,
+.container .m-cbo:active{
+    border-color: #d2d2d2;
+}
+/* style cho cÃƒÂ¡c thÃ¡ÂºÂ» anh em */
+.container .m-cbo:hover ~ .h-line,
+.container .m-cbo:focus ~ .h-line,
+.container .m-cbo:active ~ .h-line{
+    border-color: #d2d2d2;
+}
+
+.pn-department {
+    margin-right: 16px;
+}
+
+.pn-location {
+    width: 250px;
+    height: 100%;
+}
+
+.container .input-field{
+    height: 38px;
+    position: center;
+}
+.container .input-field .arrow{
+    position: absolute;
+    top: 1px;
+    right: 0px;
+    bottom: 0px;
+    width: 38px;
+    height: 38px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.container .input-field .h-line{
+    border-left: 1px #bbbbbb solid;
+    position: absolute;
+    top: 1px;
+    right: 37px;
+    bottom: 1px;
+    width: 1px;
+    height: 38px;
+}
+.container .input-field .arrow.down{
+    transform: rotate(180deg);
+}
+.container .input-field .arrow:hover{
+    background-color: #e9ebee;
+}
+
+
+/* item clear text */
+.container .input-field .btn-clear{
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    cursor: pointer;
+    display: none;
+}
+.container .input-field .btn-clear:hover .far{
+    background-color: #d2d2d2;
+    border-radius: 50%;
+}
+
+/* Drop down */
+/* .container .drop-down{
+    position: absolute;
+    top: 62px;
+    width: 250px;
+    left: 4px;
+    box-shadow: 0px 2px 16px -9px #000000;
+    display: none;
+} */
+
+    .container .drop-down .dr-item{
+    /* width: 240px; */
+    height: 40px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.container .drop-down .dr-item:hover{
+    background-color: #e9ebee;
+}
+.container .drop-down .dr-item.active{
+    background-color: #019160;
+    color: #ffffff;
+}
+
+.container .drop-down .dr-item .icon{
+    padding: 12px 15px;
+    color: transparent;
+}
+.container .drop-down .dr-item.active .icon{
+    color: #ffffff;
+}
+
+.container .drop-down .dr-item .text{
+    flex: 1;
+}
+
+input::placeholder{
+    font-size: 11px !important;
+    color: #bbbbbb;
+}

@@ -7,6 +7,7 @@
     <title>MISA CukCuk</title>
     <link href="../Assets/Common/common.css" rel="stylesheet"/>
     <link href="../Assets/Views/employee.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/5625169471.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="menu-left">
@@ -63,8 +64,54 @@
                 <div class="bo-input">
                     <div class="bo-left">
                         <input id="input-name" placeholder="Tìm kiếm theo mã, Tên hoặc Số điện thoại"/>
-                        <input id="input-department" placeholder="Tất cả phòng ban"/>
-                        <input id="input-location" placeholder="Tất cả vị trí"/>
+                        <div class="pn-department">
+                            <div class="container content-control">
+                                <div class="input-field">
+                                    <input type="text" class="m-cbo" id="cboDate" placeholder="Tất cả phòng ban">
+                                    <div class="h-line"></div>
+                                    <div class="arrow" data-arrow="true"><i class="fas fa-angle-down" data-arrow="true"></i></div>
+                                    <div class="btn-clear"><i class="far fa-times-circle"></i></div>
+                                </div>
+                                <div class="drop-down">
+                                    <div class="dr-item">
+                                        <div class="icon"><i class="fas fa-check"></i></div>
+                                        <div class="text">Phòng ban 1</div>
+                                    </div>
+                                    <div class="dr-item">
+                                        <div class="icon"><i class="fas fa-check"></i></div>
+                                        <div class="text">Phòng ban 2</div>
+                                    </div>
+                                    <div class="dr-item">
+                                        <div class="icon"><i class="fas fa-check"></i></div>
+                                        <div class="text">Phòng ban 3</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pn-location">
+                            <div class="container content-control">
+                                <div class="input-field">
+                                    <input type="text" class="m-cbo" id="cboDate" placeholder="Tất cả vị trí">
+                                    <div class="h-line"></div>
+                                    <div class="arrow" data-arrow="true"><i class="fas fa-angle-down" data-arrow="true"></i></div>
+                                    <div class="btn-clear"><i class="far fa-times-circle"></i></div>
+                                </div>
+                                <div class="drop-down">
+                                    <div class="dr-item">
+                                        <div class="icon"><i class="fas fa-check"></i></div>
+                                        <div class="text">Trạng thái 1</div>
+                                    </div>
+                                    <div class="dr-item">
+                                        <div class="icon"><i class="fas fa-check"></i></div>
+                                        <div class="text">Trạng thái 2</div>
+                                    </div>
+                                    <div class="dr-item">
+                                        <div class="icon"><i class="fas fa-check"></i></div>
+                                        <div class="text">Trạng thái 3</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="bo-refresh"></div>
                 </div>
@@ -121,11 +168,30 @@
                                             <div class="noti-item-item">
                                                 <label for="">Giới tính</label>
                                                 <br>
-                                                <select FieldName="Gender" DataType="Enum" EnumName="Gender">
-                                                    <option value="0">Nữ</option>
-                                                    <option value="1">Nam</option>
-                                                    <option value="2">Khác</option>
-                                                </select>
+                                                <div class="pn-gender">
+                                                    <div class="container content-control">
+                                                        <div class="input-field">
+                                                            <input type="text" id="cboDate" FieldName="Gender" DataType="Enum" EnumName="Gender">
+                                                            <div class="h-line-form"></div>
+                                                            <div class="arrow-form" data-arrow="true"><i class="fas fa-angle-down" data-arrow="true"></i></div>
+                                                            <div class="btn-clear"><i class="far fa-times-circle"></i></div>
+                                                        </div>
+                                                        <div class="drop-down">
+                                                            <div class="dr-item">
+                                                                <div class="icon"><i class="fas fa-check"></i></div>
+                                                                <div class="text" value="0">Nữ</div>
+                                                            </div>
+                                                            <div class="dr-item">
+                                                                <div class="icon"><i class="fas fa-check"></i></div>
+                                                                <div class="text" value="1">Nam</div>
+                                                            </div>
+                                                            <div class="dr-item">
+                                                                <div class="icon"><i class="fas fa-check"></i></div>
+                                                                <div class="text" value="2">Khác</div>
+                                                            </div>     
+                                                        </div>
+                                                    </div>
+                                                </div> 
                                             </div>                                  
                                         </div>
                                         <div class="noti-item">
@@ -167,20 +233,58 @@
                                             <div class="noti-item-item">
                                                 <label for="">Vị trí</label>
                                                 <br>
-                                                <select FieldName="Job" DataType="Enum">
-                                                    <option value="1">Giám đốc</option>
-                                                    <option value="2">Kế Toán</option>
-                                                    <option value="3">Lập trình viên</option>
-                                                </select>
+                                                <div class="pn-job">
+                                                    <div class="container content-control">
+                                                        <div class="input-field">
+                                                            <input type="text" id="cboDate" placeholder="Vị trí" FieldName="Job" DataType="Enum" EnumName="Job">
+                                                            <div class="h-line-form"></div>
+                                                            <div class="arrow-form" data-arrow="true"><i class="fas fa-angle-down" data-arrow="true"></i></div>
+                                                            <div class="btn-clear"><i class="far fa-times-circle"></i></div>
+                                                        </div>
+                                                        <div class="drop-down">
+                                                            <div class="dr-item" value="1">
+                                                                <div class="icon"><i class="fas fa-check"></i></div>
+                                                                <div class="text">Giám đốc</div>
+                                                            </div>
+                                                            <div class="dr-item" value="2">
+                                                                <div class="icon"><i class="fas fa-check"></i></div>
+                                                                <div class="text" >Kế toán</div>
+                                                            </div>
+                                                            <div class="dr-item" value="3">
+                                                                <div class="icon"><i class="fas fa-check"></i></div>
+                                                                <div class="text">Lập trình viên</div>
+                                                            </div>     
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>      
                                             <div class="noti-item-item">
                                                 <label for="">Phòng ban</label>
                                                 <br>
-                                                <select FieldName="Department" DataType="Enum">
-                                                    <option value="1">Phòng nhân sự</option>
-                                                    <option value="2">Phòng kế toán</option>
-                                                    <option value="3">Phòng kinh doanh</option>
-                                                </select>
+                                                <div class="pn-department-form">
+                                                    <div class="container content-control">
+                                                        <div class="input-field">
+                                                            <input type="text" id="cboDate" placeholder="Phòng ban" FieldName="Department" DataType="Enum">
+                                                            <div class="h-line-form"></div>
+                                                            <div class="arrow-form" data-arrow="true"><i class="fas fa-angle-down" data-arrow="true"></i></div>
+                                                            <div class="btn-clear"><i class="far fa-times-circle"></i></div>
+                                                        </div>
+                                                        <div class="drop-down">
+                                                            <div class="dr-item" value="1">
+                                                                <div class="icon"><i class="fas fa-check"></i></div>
+                                                                <div class="text">Phòng kinh doan</div>
+                                                            </div>
+                                                            <div class="dr-item" value="2">
+                                                                <div class="icon"><i class="fas fa-check"></i></div>
+                                                                <div class="text">Phòng nhân sự</div>
+                                                            </div>
+                                                            <div class="dr-item" value="3">
+                                                                <div class="icon"><i class="fas fa-check"></i></div>
+                                                                <div class="text">Phòng tài chính</div>
+                                                            </div>     
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>                              
                                         </div>
                                         <div class="noti-item">
@@ -204,10 +308,26 @@
                                             <div class="noti-item-item">
                                                 <label for="">Tình trạng công việc</label>
                                                 <br>
-                                                <select FieldName="WorkStatus" DataType="Enum">
-                                                    <option value="1">Đang công tác</option>
-                                                    <option value="2">Đã nghỉ việc</option>
-                                                </select>
+                                                <div class="pn-workstatus">
+                                                    <div class="container content-control">
+                                                        <div class="input-field">
+                                                            <input type="text" id="cboDate" placeholder="Tình trạng làm việc" FieldName="WorkStatus" DataType="Enum">
+                                                            <div class="h-line-form"></div>
+                                                            <div class="arrow-form" data-arrow="true"><i class="fas fa-angle-down" data-arrow="true"></i></div>
+                                                            <div class="btn-clear"><i class="far fa-times-circle"></i></div>
+                                                        </div>
+                                                        <div class="drop-down">
+                                                            <div class="dr-item" value="1">
+                                                                <div class="icon"><i class="fas fa-check"></i></div>
+                                                                <div class="text" >Đang công tác</div>
+                                                            </div>
+                                                            <div class="dr-item" value="2">
+                                                                <div class="icon"><i class="fas fa-check"></i></div>
+                                                                <div class="text" value="2">Đã nghỉ việc</div>
+                                                            </div>     
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>                                 
                                         </div>
                                     </div>
@@ -220,7 +340,7 @@
                                     <div class="button-text">Hủy</div>
                                 </div>
                                 <div class="button-save button" Command="Save">
-                                    <div class="button-icon-save"></div>
+                                    <div class="button-icon-save"><i class="far fa-save"></i></div>                                 
                                     <div class="button-text">Lưu</div>
                                 </div>
                             </div>
