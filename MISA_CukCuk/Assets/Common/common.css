@@ -394,7 +394,7 @@ table {
 thead th {
     position: sticky;
     top: 0;
-    background: rgb(235, 235, 235);
+    background: #fff;
     color: #000;
 }
 
