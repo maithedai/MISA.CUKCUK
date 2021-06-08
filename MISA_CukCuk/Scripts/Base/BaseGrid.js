@@ -31,6 +31,9 @@ class BaseGrid {
 
         //Khởi tạo sự kiện click button refresh
         me.refreshPage();
+
+        //Khởi tạo sự kiện thu nhỏ menu
+        me.initEventsSmaillMenu(); 
     }
 
     /**
@@ -73,6 +76,34 @@ class BaseGrid {
         }
     }
 
+    /**
+     * Sự kiện thu nhỏ menu left
+     * MTDAI 08.06.2021
+     */
+    initEventsSmaillMenu() {
+
+        let $item = $(this),
+            $menu = $(".menu-left"),
+            $content = $(".content");
+        
+            
+        $(".icon-bar").on("click", function(){  
+            let $find = $(".menu-bar-small");
+           
+            if($find.length > 0) {
+                $find.removeClass("menu-bar-small");
+            }else {
+                
+                $menu.addClass("menu-bar-small");
+                $content.addClass("menu-bar-small");
+            }   
+        })
+    }
+
+    /**
+     * Sự kiện refresh trang
+     * MTDAI 08.06.2021
+     */
     initEventToolbarRefresh() {
 
         let me = this,

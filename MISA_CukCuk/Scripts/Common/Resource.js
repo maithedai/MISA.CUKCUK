@@ -23,6 +23,13 @@ Resource.Gender = {
     Other: "Khác"
 }
 
+//tình trạng làm việc
+Resource.WorkStatus = {
+    Active: "Đang công tác",
+    UnActive: "Đã nghỉ việc",
+    Intern: "Đang thử việc"
+}
+
 // Các commandType của toolbar
 Resource.CommandType = {
     Add: "Add",
