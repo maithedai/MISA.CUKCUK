@@ -141,14 +141,16 @@ body {
         display: flex;
     }
 .restaurent-text {
-    width: 150px;
+    width: auto;
     height: 100%;
     line-height: 50px;
     text-align: center;
+    margin-right: 10px;
+    margin-left: 16px;
 }
 
 .restaurent-drop {
-    width: 50px;
+    width: 16px;
     height: 100%;
     background-image: url("../Resource/icon/btn-next-page.svg");
     background-repeat: no-repeat;
@@ -157,8 +159,9 @@ body {
 }
 
 .profile .icon-avt {
-    width: 50px;
+    width: 30px;
     height: 100%;
+    margin-right: 16px;
     background-image: url("../Resource/icon/avatar-default.png");
     background-repeat: no-repeat;
     background-size: 30px;
@@ -172,8 +175,9 @@ body {
 }
 
 .profile .profile-option {
-    width: 50px;
+    width: 16px;
     height: 100%;
+    margin: 0px 16px 16px;
     background-image: url("../Resource/icon/option.png");
     background-repeat: no-repeat;
     background-position: center;
