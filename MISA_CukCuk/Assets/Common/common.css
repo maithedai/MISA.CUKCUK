@@ -7,12 +7,7 @@ body {
 :root {
     --menu-bar-width: 250px;
 }
-
-* {
-    transition: 0.3s;
-}
     
-
 .menu-bar-small {
     --menu-bar-width: 52px;
 }
@@ -31,6 +26,7 @@ body {
     height: 100vh;
     border-right: 1px solid #ccc;
     overflow: hidden;
+    transition: 0.3s;
 }
 
 .content {
@@ -399,7 +395,7 @@ thead th {
 }
 
 .selected-row {
-    background-color: #81b1a1 !important;
+    background-color: #e3f3ee !important;
 }
 
 tr:nth-child(even){background-color: #f2f2f2;}
