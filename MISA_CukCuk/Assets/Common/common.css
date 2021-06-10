@@ -493,8 +493,8 @@ div.formDetail select {
 .formContent {
     position: absolute;
     top: 32px;
-    left: 20%;
-    right: 20%;
+    left: 30%;
+    right: 30%;
     bottom: 32px;
     background-color: #fff;
     border-radius: 5px;
